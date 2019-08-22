@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333333;
+    color: #fff;
+    line-height: 1.6;
+    height: 100vh;
+    /* remove scroll from the body and put scroll on Y axis */
+    /* overflow: hidden; */
+}
+.root{
+    /* width: 100%;
+    height: 100%; */
+    /* CSS Smooth Scroll */
+    /* overflow-y: scroll;
+    scroll-behavior: smooth; */
+    /* Adding mandatory snap effect when scrolling */
+    /* scroll-snap-type: y mandatory;  */
+}
+
+
+
+/* Responsive Nav Bar styling  */
+
+
+.navbar {
+    /* Always at the top of the page */
+    position: fixed;
+    top: 0;
+    /* Always on top of the rest of the content */
+    z-index: 1;
+    /* ul inside will be a flex item */
+    /* display: flex; */
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0 , 0.5);
+
+}
+.navbar ul{
+    /* inner items are flex items */
+    /* display: flex; */
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+    
+}
+
+.navbar ul li a {
+    /* remove link style */
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    
+
+}
+
+.navbar ul li a:hover{
+    color: skyblue;
+}
+
+
+  .navbar a#openup {
+    display: none;
+ 
+  }
+  
+  @media screen and (max-width: 580px) {
+
+  
+    .navbar {
+      height: 50px;
+
+    }
+    .navbar ul {
+      display: none;
+      height: auto;
+
+    }
+    .navbar li {
+      width: 100%;
+
+    }
+    .navbar a {
+        text-decoration: none;
+        text-transform: uppercase;
+      color: #f4f4f4;
+      text-indent: 25px;
+      text-align: left;
+    width: 100%;
+    text-indent: 25px;
+
+    }
+    .navbar a:hover {
+      color: skyblue;
+    }
+    .navbar a#openup:after {
+      content: "|||";
+      transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-90deg);
+      /* Safari and Chrome */
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      
+    }
+    .navbar a#openup {
+      display: block;
+      width: 100%;
+      position: relative;
+      background: rgba(0, 0, 0 , 0.5);
+
+    }
+  }
+
+  .cf:before,
+  .cf:after {
+    content: "";
+    display: block;
+
+  }
+  
+  .cf:after {
+    clear: both;
+  }
+  
+  .cf {
+    zoom: 1;
+  }
+  
+
+
+
+
+/* Styling sections */
+section {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+width: 100%;
+height: 100vh;
+/* Scroll snap effect */
+scroll-snap-align: center;
+}
+
+section h1 {
+    font-size: 4rem;
+}
+section p {
+    font-size: 1.5rem;
+
+}
+
+#welcome {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #737eba, #469fab);
+    animation: animate 20s linear infinite;
+    
+}
+
+#welcome:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 100vh solid transparent;
+    border-right: 100vh solid #fff;
+    opacity: 0.1;
+}
+
+#welcome:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 100vh solid transparent;
+    border-left: 100vh solid #fff;
+    opacity: 0.1;
+}
+
+.welcomeMsg {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: xx-large;
+    color: white;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+#scrollButton {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#aboutMe {
+    position: relative;
+    width: 100%;
+
+}
+
+#projects {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(90deg, #3f51b5, #00bcd4);
+}
+.slide {
+    display: flex;
+    flex-direction: row;
+
+}
+.cardHolder {
+    height: 500px; /* Can be anything */
+    width: 500px; /* Can be anything */
+    position: relative;
+    padding: 1rem;
+    margin: 3rem;
+    background-color: rgba(256, 256, 256, 0.7);
+}
+
+.cardHolder:hover {
+    
+}
+
+.slideImg {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}

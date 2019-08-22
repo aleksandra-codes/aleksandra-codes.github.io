@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style/style.css">
+    <!-- <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css"> -->
     <title>Personal Website</title>
 </head>
 <body>
     <div class="root">
-        <nav class="navbar">
-            <ul>
+
+        <nav class="navbar" class="cf">
+            <ul class="cf">
                 <li><a href="#welcome">Home</a></li>
                 <li><a href="#aboutMe">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a href='#' id='openup'></a>
         </nav>
+
         <section id="welcome">
-            <h1>Hello, I'm Aleksandra (Sasha) Sorokina</h1>
-            <p> I'm a software developer </p>
-            <button id="scrollButton">View my work</button>
+                <div><h1 class="heading-primary-main">Hello, I'm Aleksandra (Sasha) Sorokina</h1>
+                <p class="heading-primary-sub"> I'm a software developer </p></div>
+                <a href="#projects" class="btn btn-white btn-animated">View my work</a>
         </section>
         <section id="aboutMe">
                 <h1>About me</h1>
@@ -32,10 +36,10 @@
                 <h1>Projects and hackathons</h1>
                 <p> I'm a software developer </p>
                 <div class="slide">
-                        <div class="cardHolder" id="saveTheForest"> <a href="#"><img class ="slideImg" src="style/saveForest.png"></a></div>
-                        <div class="cardHolder" id="guardiansForest"> <a href="#"><img class ="slideImg" src="style/guardians.jpg"></a></div>
-                        <div class="cardHolder" id="rideShare"> <a href="#"><img class ="slideImg" src="style/RideShare.png"></a></div>
-                        <div class="cardHolder" id="greenPoints"> <a href="#"><img class ="slideImg" src="style/greenPoint.png"></a></div>
+                        <div class="cardHolder" id="saveTheForest"> <a href="#"><img class ="slideImg" src="resources/saveForest.png"></a></div>
+                        <div class="cardHolder" id="guardiansForest"> <a href="#"><img class ="slideImg" src="resources/guardians.jpg"></a></div>
+                        <div class="cardHolder" id="rideShare"> <a href="#"><img class ="slideImg" src="resources/RideShare.png"></a></div>
+                        <div class="cardHolder" id="greenPoints"> <a href="#"><img class ="slideImg" src="resources/greenPoint.png"></a></div>
                 </div>
         </section>
         <section id="contact">
