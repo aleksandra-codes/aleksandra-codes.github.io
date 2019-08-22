@@ -366,6 +366,6 @@ section {
     }
 
     .btn-animated {
-        animation: moveInBottom 0.5s ease-out .70s;
+        animation: moveInBottom 0.5s ease-out .65s;
         animation-fill-mode: backwards;
     }
