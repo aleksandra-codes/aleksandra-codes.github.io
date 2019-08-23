@@ -1,0 +1,401 @@
+
+$color-primary-background: #333;
+$color-primary-light: #eee;
+$color-primary-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+
+$color-gradient-start: #ff00f2;
+$color-gradient-end: #01ebfc;
+
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    font-size: 62.5%; 
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: $color-primary-background;
+    color: $color-white;
+    line-height: 1.6;
+    height: 100vh;
+    box-sizing: border-box;
+    /* remove scroll from the body and put scroll on Y axis */
+    /* overflow: hidden; */
+}
+  h1 { 
+    font-family: "PT Sans Narrow", sans-serif;
+    line-height: 1.1;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  p {
+    text-align: center;
+    padding: 1rem;
+  }
+
+
+  /* Responsive Nav Bar styling  */
+  nav {
+    height: 4rem;
+    width: 100%;
+    background-color: $color-primary-background;
+    color: $color-primary-light;
+    ul {
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        display: inline;
+    
+      }
+      a {
+        display: inline-block;
+        width: 10rem;
+        text-align: center;
+        text-decoration: none;
+        padding: 1rem 0;
+        color: $color-primary-light;
+      }
+      li:hover {
+        background-color: darken($color-primary-background, 15%);
+      }
+      a#openup {
+        display: none;
+      }
+  }
+  
+  
+  
+  
+  
+  
+  @media screen and (max-width: 580px) {
+    h1 {
+      font-size: 2.8em;
+    }
+  
+    nav {
+      height: auto;
+      border-bottom: 0;
+      ul {
+        display: none;
+        height: auto;
+      }
+      li {
+        width: 100%;
+        float: left;
+        position: relative;
+      }
+      a {
+        text-align: left;
+        width: 100%;
+        text-indent: 2.5rem;
+        background: $color-primary-background;
+        border-bottom: 1px solid $color-primary-dark;
+      }
+      a:hover {
+        background: $color-primary-dark;
+      }
+      a#openup:after {
+        content: "|||";
+        transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-90deg);
+        /* Safari and Chrome */
+        width: 3.5rem;
+        height: 3.5rem;
+        display: inline-block;
+        position: absolute;
+        right: 0.5rem;
+        top: 2rem;
+      }
+      a#openup {
+        display: block;
+        background-color: $color-primary-background;
+        width: 100%;
+        position: relative;
+        padding: 2rem;
+      }
+
+    } 
+    
+  }
+
+  .cf {
+    zoom: 1;
+    &::before{
+        content: "";
+        display: table;
+    }
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+  }
+
+  
+  
+  
+  /* For IE 6/7 (trigger hasLayout) */
+  
+
+/* Styling sections */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    /* Scroll snap effect */
+    scroll-snap-align: center;
+        h1 {
+            font-size: 5rem;
+        }
+        p {
+            font-size: 1.5rem;
+        
+        }
+        
+    }
+    
+   
+    
+    .heading-primary--main{
+        display: block;
+        animation: moveInLeft 0.5s ease-out;
+    }
+    .heading-primary--sub{
+        display: block;
+        margin-bottom: 6rem;
+        animation: moveInRight 0.5s ease-out;
+    }
+    #welcome {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(90deg, $color-gradient-start, $color-gradient-end);
+        animation: animate 20s linear infinite;
+        
+   }
+     /* 
+    #welcome:before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-top: 100vh solid transparent;
+        border-right: 100vh solid #fff;
+        opacity: 0.1;
+    }
+    
+    #welcome:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 100vh solid transparent;
+        border-left: 100vh solid #fff;
+        opacity: 0.1;
+    } */
+    
+    .welcomeMsg {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: xx-large;
+        color: white;
+        text-shadow: -1px -1px 1px rgba($color-primary-light, .1), 1px 1px 1px rgba($color-primary-dark, .5);
+    }
+    #scrollButton {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    
+    #aboutMe {
+        position: relative;
+        width: 100%;
+    
+    }
+    
+    #projects {
+        position: relative;
+        width: 100%;
+        background: linear-gradient(90deg, $color-gradient-start, $color-gradient-end);
+    }
+    .slide {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    .cardHolder {
+        height: auto; /* Can be anything */
+        width: 25%; /* Can be anything */
+        flex: 0 1 80%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    
+ 
+    
+    .slideImg {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+
+
+    @media screen and (max-width: 60em) {
+        #welcome::before{
+            display: none;
+        }
+        #welcome::after{
+            display: none;
+        }  
+
+        section h1 {
+            font-size: 2rem;
+
+          }
+          
+        section p {
+            font-size: 1rem;
+
+          } 
+
+        
+    }
+    @media screen and (min-width: 40em) {
+        .slide {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+     
+        .cardHolder {
+            flex: 0 1 calc(50% - 1em);
+        }
+
+       
+        
+    }
+
+    @media screen and (min-width: 80em) {
+        .cardHolder {
+            flex: 0 1 calc(25% - 1em);
+        }
+    }
+
+
+    @keyframes animate {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    @keyframes moveInRight {
+        0% {
+            opacity: 0;
+            transform:translateX(10rem);
+        }
+        80% {
+            transform:translateX(-1rem);
+        }
+        100% {
+            opacity: 1;
+            transform:translateX(0);
+        }
+    }
+    @keyframes moveInLeft {
+        0% {
+            opacity: 0;
+            transform:translateX(-10rem);
+        }
+        80% {
+            transform:translateX(1rem);
+        }
+        100% {
+            opacity: 1;
+            transform:translateX(0);
+        }
+    }
+    @keyframes moveInBottom {
+        0% {
+            opacity: 0;
+            transform:translateY(3rem);
+        }
+        100% {
+            opacity: 1;
+            transform:translateY(0);
+        }
+    }
+    .btn:link,
+    .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
+    .btn:hover{
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+
+    .btn:active {
+        transform: translate(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
+    }
+    .btn--white{
+        background-color: $color-white;
+        color: $color-primary-dark;
+    }
+
+
+    .btn::after{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+        
+    }
+    .btn--white::after{
+        background-color: $color-white;
+    }
+
+    .btn:hover::after{
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+
+    }
+
+    .btn--animated {
+        animation: moveInBottom 0.5s ease-out .65s;
+        animation-fill-mode: backwards;
+    }
