@@ -1,0 +1,42 @@
+/* Responsive Nav Bar styling  */
+nav {
+    height: 4rem;
+    width: 100%;
+    background-color: $color-primary-background;
+    color: $color-primary-light;
+    ul {
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        display: inline;
+    
+      }
+      a {
+        display: inline-block;
+        width: 10rem;
+        text-align: center;
+        text-decoration: none;
+        padding: 1rem 0;
+        color: $color-primary-light;
+      }
+      li:hover {
+        background-color: darken($color-primary-background, 15%);
+      }
+      a#openup {
+        display: none;
+      }
+  }
+  
+  .cf {
+    zoom: 1;
+    &::before{
+        content: "";
+        display: table;
+    }
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+  }

@@ -9,14 +9,50 @@ html {
   font-size: 62.5%; }
 
 body {
+  box-sizing: border-box;
+  /* remove scroll from the body and put scroll on Y axis */
+  /* overflow: hidden; */ }
+
+@keyframes animateBackground {
+  0% {
+    filter: hue-rotate(0deg); }
+  100% {
+    filter: hue-rotate(360deg); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+body {
   font-family: Arial, Helvetica, sans-serif;
   background: #333;
   color: #fff;
   line-height: 1.6;
-  height: 100vh;
-  box-sizing: border-box;
-  /* remove scroll from the body and put scroll on Y axis */
-  /* overflow: hidden; */ }
+  height: 100vh; }
 
 h1 {
   font-family: "PT Sans Narrow", sans-serif;
@@ -27,6 +63,116 @@ h1 {
 p {
   text-align: center;
   padding: 1rem; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem; }
+  .btn:link:hover, .btn:visited:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:link:hover::after, .btn:visited:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:link:active, .btn:visited:active {
+    transform: translate(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn:link::after, .btn:visited::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s; }
+
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out .65s;
+  animation-fill-mode: backwards; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+/* Styling sections */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* Scroll snap effect */
+  scroll-snap-align: center; }
+  section h1 {
+    font-size: 5rem; }
+  section p {
+    font-size: 1.5rem; }
+
+.welcome {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, #ff00f2, #01ebfc);
+  animation: animateBackground  20s linear infinite; }
+  .welcome__heading-primary--main {
+    display: block;
+    animation: moveInLeft 0.5s ease-out; }
+  .welcome__heading-primary--sub {
+    display: block;
+    margin-bottom: 6rem;
+    animation: moveInRight 0.5s ease-out; }
+
+/* 
+#welcome:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 100vh solid transparent;
+    border-right: 100vh solid #fff;
+    opacity: 0.1;
+}
+
+#welcome:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 100vh solid transparent;
+    border-left: 100vh solid #fff;
+    opacity: 0.1;
+} */
+.welcomeMsg {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: xx-large;
+  color: white;
+  text-shadow: -1px -1px 1px rgba(238, 238, 238, 0.1), 1px 1px 1px rgba(119, 119, 119, 0.5); }
+
+#scrollButton {
+  font-family: 'Nunito Sans', sans-serif; }
+
+#aboutMe {
+  position: relative;
+  width: 100%; }
+
+#projects {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(90deg, #ff00f2, #01ebfc); }
 
 /* Responsive Nav Bar styling  */
 nav {
@@ -50,6 +196,16 @@ nav {
     background-color: #0d0d0d; }
   nav a#openup {
     display: none; }
+
+.cf {
+  zoom: 1; }
+  .cf::before {
+    content: "";
+    display: table; }
+  .cf::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 @media screen and (max-width: 580px) {
   h1 {
@@ -92,89 +248,6 @@ nav {
       position: relative;
       padding: 2rem; } }
 
-.cf {
-  zoom: 1; }
-  .cf::before {
-    content: "";
-    display: table; }
-  .cf::after {
-    content: "";
-    display: table;
-    clear: both; }
-
-/* For IE 6/7 (trigger hasLayout) */
-/* Styling sections */
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 100vh;
-  /* Scroll snap effect */
-  scroll-snap-align: center; }
-  section h1 {
-    font-size: 5rem; }
-  section p {
-    font-size: 1.5rem; }
-
-.heading-primary--main {
-  display: block;
-  animation: moveInLeft 0.5s ease-out; }
-
-.heading-primary--sub {
-  display: block;
-  margin-bottom: 6rem;
-  animation: moveInRight 0.5s ease-out; }
-
-#welcome {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(90deg, #ff00f2, #01ebfc);
-  animation: animate 20s linear infinite; }
-
-/* 
-    #welcome:before {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-top: 100vh solid transparent;
-        border-right: 100vh solid #fff;
-        opacity: 0.1;
-    }
-    
-    #welcome:after {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-top: 100vh solid transparent;
-        border-left: 100vh solid #fff;
-        opacity: 0.1;
-    } */
-.welcomeMsg {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: xx-large;
-  color: white;
-  text-shadow: -1px -1px 1px rgba(238, 238, 238, 0.1), 1px 1px 1px rgba(119, 119, 119, 0.5); }
-
-#scrollButton {
-  font-family: 'Nunito Sans', sans-serif; }
-
-#aboutMe {
-  position: relative;
-  width: 100%; }
-
-#projects {
-  position: relative;
-  width: 100%;
-  background: linear-gradient(90deg, #ff00f2, #01ebfc); }
-
 .slide {
   display: flex;
   justify-content: space-between;
@@ -216,83 +289,3 @@ section {
 @media screen and (min-width: 80em) {
   .cardHolder {
     flex: 0 1 calc(25% - 1em); } }
-
-@keyframes animate {
-  0% {
-    filter: hue-rotate(0deg); }
-  100% {
-    filter: hue-rotate(360deg); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all .2s;
-  position: relative;
-  font-size: 1.6rem; }
-
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translate(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-
-.btn::after {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
-.btn--animated {
-  animation: moveInBottom 0.5s ease-out .65s;
-  animation-fill-mode: backwards; }
