@@ -165,11 +165,11 @@ section {
 #scrollButton {
   font-family: 'Nunito Sans', sans-serif; }
 
-#aboutMe {
+.aboutMe {
   position: relative;
   width: 100%; }
 
-#projects {
+.projects {
   position: relative;
   width: 100%;
   background: linear-gradient(90deg, #ff00f2, #01ebfc); }
