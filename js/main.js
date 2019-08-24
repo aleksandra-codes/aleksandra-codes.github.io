@@ -1,5 +1,5 @@
 //jQuery Smooth scroll
-$('.navbar a').on('click', function(e){
+$('.nav a').on('click', function(e){
     if(this.hash !== '') {
         e.preventDefault();
         // Hash value into a variable
@@ -16,7 +16,7 @@ $('.navbar a').on('click', function(e){
 });
 
 //jQuery Smooth scroll from "view my work button"
-$('#welcome a').on('click', function(e){
+$('.welcome a').on('click', function(e){
     if(this.hash !== '') {
         e.preventDefault();
         // Hash value into a variable
@@ -32,38 +32,9 @@ $('#welcome a').on('click', function(e){
     }
 });
 
-
-
 // Option 3 to implement smooth scroll
 const scroll = new SmoothScroll('.navbar a[href*="#"]');
 
-//Slide for projects
-
-// $(function() {   
-//     $('.slide').slick({
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         autoplay: true,
-//         autoplaySpeed: 200,
-//         prevArrow: '<button type="button" data-role="none" class="slick-prev">Previous</button>',
-//           // next arrow
-//           nextArrow: '<button type="button" data-role="none" class="slick-next">Next</button>',
-//           centerMode: true,
-//           // Side padding when in center mode. (px or %)
-//           centerPadding: '50px',
-//           // CSS3 easing
-//           cssEase: 'ease',
-//           // Current slide indicator dots
-//           dots: true,
-//           // Class for slide indicator dots container
-//           dotsClass: 'slick-dots',
-//             // Enables desktop dragging
-//             draggable: true,
-//             // animate() fallback easing
-//             easing: 'linear',
-
-//      });
-//    });
 
 // Responsive nav
 $(function() {

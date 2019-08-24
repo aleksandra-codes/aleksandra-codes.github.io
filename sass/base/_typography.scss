@@ -17,3 +17,21 @@ h1 {
     text-align: center;
     padding: 1rem;
   }
+
+  .heading-secondary {
+    font-size: 3rem;
+    text-transform: uppercase;
+    // font-weight: 700;
+    background-image: linear-gradient(to right, $color-gradient-start, $color-gradient-end);
+    animation: animateBackground  20s linear infinite;
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all .2s;
+    letter-spacing: 2px;
+    &:hover {
+      transform:skewY(2deg);
+      text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+  }

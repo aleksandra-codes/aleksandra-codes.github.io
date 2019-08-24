@@ -2,7 +2,7 @@
 nav {
     height: 4rem;
     width: 100%;
-    background-color: $color-primary-background;
+    background-color: $color-grey-light-1;
     color: $color-primary-light;
     ul {
         padding: 0;
@@ -17,8 +17,10 @@ nav {
         width: 10rem;
         text-align: center;
         text-decoration: none;
+        text-transform: uppercase;
         padding: 1rem 0;
         color: $color-primary-light;
+        font-size: 1.5rem;
       }
       li:hover {
         background-color: darken($color-primary-background, 15%);
