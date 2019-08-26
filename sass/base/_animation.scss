@@ -1,3 +1,5 @@
+
+//animation for background changing colors
 @keyframes animateBackground {
     0% {
         filter: hue-rotate(0deg);
@@ -6,7 +8,7 @@
         filter: hue-rotate(360deg);
     }
 }
-
+//animation for landing page text
 @keyframes moveInRight {
     0% {
         opacity: 0;
@@ -41,5 +43,20 @@
     100% {
         opacity: 1;
         transform:translateY(0);
+    }
+}
+// animation for social media links
+@keyframes linkAnim {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        left: -10%;
+        top: -10%;
     }
 }
