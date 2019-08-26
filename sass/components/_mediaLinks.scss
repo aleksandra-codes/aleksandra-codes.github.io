@@ -8,7 +8,7 @@
     margin: 1rem;
     border-radius: 30%;
     box-shadow: 0 5px 15px -5px $color-primary-dark;
-    color: $color-gradient-start;
+    color: $color-primary-light;
     overflow: hidden;
     position: relative;
 
@@ -29,7 +29,7 @@
             position: absolute;
             width: 120%;
             height: 120%;
-            background: $color-gradient-start;
+            background: $color-primary-light;
             transform: rotate(45deg);
             left: -110%;
             top: 90%;

@@ -7,7 +7,7 @@ body{
 
 }
 h1 { 
-    font-family: "PT Sans Narrow", sans-serif;
+    // font-family: "PT Sans Narrow", sans-serif;
     line-height: 1.1;
     text-align: center;
     padding: 1rem;
@@ -19,15 +19,15 @@ h1 {
   }
 
   .heading-secondary {
+    width: 100%;
     font-size: 3rem;
     text-transform: uppercase;
-    // font-weight: 700;
-    background-image: linear-gradient(to right, $color-gradient-start, $color-gradient-end);
-    animation: animateBackground  20s linear infinite;
+    // background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    animation: animateBackground  10s linear infinite;
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: $color-primary-light;
     transition: all .2s;
     letter-spacing: 2px;
     &:hover {

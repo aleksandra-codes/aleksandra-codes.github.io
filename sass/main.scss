@@ -20,6 +20,7 @@
 @import "layout/navbar";
 @import "layout/contact";
 @import "layout/grid";
+@import "layout/section";
 
 
 
@@ -86,7 +87,7 @@
     
    
     .slide {
-        display: flex;
+        display: block;
         justify-content: space-between;
         flex-wrap: wrap;
         

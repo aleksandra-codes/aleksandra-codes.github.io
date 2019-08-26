@@ -66,7 +66,6 @@ body {
   height: 100vh; }
 
 h1 {
-  font-family: "PT Sans Narrow", sans-serif;
   line-height: 1.1;
   text-align: center;
   padding: 1rem; }
@@ -76,14 +75,14 @@ p {
   padding: 1rem; }
 
 .heading-secondary {
+  width: 100%;
   font-size: 3rem;
   text-transform: uppercase;
-  background-image: linear-gradient(to right, #ff00f2, #01ebfc);
-  animation: animateBackground  20s linear infinite;
+  animation: animateBackground  10s linear infinite;
   display: inline-block;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: #333;
   transition: all .2s;
   letter-spacing: 2px; }
   .heading-secondary:hover {
@@ -147,7 +146,7 @@ p {
   margin: 1rem;
   border-radius: 30%;
   box-shadow: 0 5px 15px -5px #1f1f1f;
-  color: #ff00f2;
+  color: #333;
   overflow: hidden;
   position: relative; }
   .btn-link i {
@@ -162,7 +161,7 @@ p {
     position: absolute;
     width: 120%;
     height: 120%;
-    background: #ff00f2;
+    background: #333;
     transform: rotate(45deg);
     left: -110%;
     top: 90%; }
@@ -176,9 +175,16 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background: linear-gradient(90deg, #01ebfc, #ff00f2);
-  animation: animateBackground  20s linear infinite; }
+  animation: animateBackground  20s linear infinite;
+  /* Scroll snap effect */
+  scroll-snap-align: center; }
   .welcome__heading-primary--main {
     display: block;
     animation: moveInLeft 0.5s ease-out; }
@@ -187,28 +193,12 @@ p {
     margin-bottom: 6rem;
     animation: moveInRight 0.5s ease-out;
     font-size: 2.3rem; }
-
-.welcome {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 100vh;
-  /* Scroll snap effect */
-  scroll-snap-align: center; }
   .welcome h1 {
     font-size: 6rem; }
 
 .aboutMe {
   position: relative;
   width: 100%; }
-
-.projects {
-  position: relative;
-  width: 100%;
-  background: linear-gradient(90deg, #ff00f2, #01ebfc); }
 
 /* Responsive Nav Bar styling  */
 nav {
@@ -244,6 +234,13 @@ nav {
     content: "";
     display: table;
     clear: both; }
+
+#section-contact {
+  width: 80%;
+  background-color: #fff;
+  height: 30vh;
+  display: flex;
+  margin: 0 auto; }
 
 .row {
   max-width: 114rem;
@@ -313,7 +310,7 @@ nav {
       padding: 2rem; } }
 
 .slide {
-  display: flex;
+  display: block;
   justify-content: space-between;
   flex-wrap: wrap; }
 
