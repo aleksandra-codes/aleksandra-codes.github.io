@@ -10,7 +10,10 @@ nav {
       }
       li {
         display: inline;
-    
+        a:hover {
+          background-color:$color-primary-light;
+          color: $color-white;
+        }
       }
       a {
         display: inline-block;
@@ -22,9 +25,7 @@ nav {
         color: $color-primary-light;
         font-size: 1.5rem;
       }
-      li:hover {
-        background-color: darken($color-primary-background, 15%);
-      }
+      
       a#openup {
         display: none;
       }
@@ -41,4 +42,82 @@ nav {
         display: table;
         clear: both;
     }
+  }
+
+
+@media screen and (max-width: 580px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  nav {
+    height: auto;
+    border-bottom: 0;
+    ul {
+      display: none;
+      height: auto;
+    }
+    li {
+      width: 100%;
+      float: left;
+      position: relative;
+    }
+    a {
+      text-align: left;
+      width: 100%;
+      text-indent: 2.5rem;
+      background: $color-primary-background;
+      border-bottom: 1px solid $color-primary-dark;
+    }
+    a:hover {
+      background: $color-primary-dark;
+    }
+    a#openup:after {
+      content: "|||";
+      transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-90deg);
+      /* Safari and Chrome */
+      width: 3.5rem;
+      height: 3.5rem;
+      display: inline-block;
+      position: absolute;
+      right: 0.5rem;
+      top: 1.5rem;
+    }
+    a#openup {
+      display: block;
+      background-color: $color-primary-background;
+      width: 100%;
+      position: relative;
+      padding: 2rem;
+      &:hover {
+        background-color:$color-primary-light;
+        color: $color-white;
+      }
+    }
+
+  } 
+  
+}
+
+
+
+  @media screen and (max-width: 60em) {
+
+        
+      section p {
+          font-size: 2rem;
+
+        } 
+
+      
+  }
+  @media screen and (min-width: 40em) {
+
+  }
+
+  @media screen and (min-width: 80em) {
+
   }

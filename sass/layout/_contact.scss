@@ -6,3 +6,47 @@
     margin: 0 auto;
 
 }
+
+.btn-link{
+    display: inline-block;
+    width: 9rem;
+    height: 9rem;
+    background: $color-grey-light-1;
+    // background-color: white;
+    
+    margin: 1rem;
+    border-radius: 10rem;
+    box-shadow: 0 5px 15px -5px $color-primary-dark;
+    color: $color-primary-light;
+    overflow: hidden;
+    position: relative;
+
+        i {
+            line-height: 9rem;
+            font-size: 2.6rem;
+            transition: 0.2s linear;
+        }
+
+        &:hover i{
+            transform: scale(1.2);
+            color: $color-grey-light-1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 130%;
+            height: 130%;
+            background: $color-primary-light;
+            transform: rotate(45deg);
+            left: -160%;
+            top: 90%;
+        }
+        &:hover::before {
+            animation: linkAnim 0.7s 1;
+            top: -10%;
+            left: 1%;
+
+        }
+}
+

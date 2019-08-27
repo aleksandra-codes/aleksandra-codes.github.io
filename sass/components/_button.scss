@@ -16,15 +16,14 @@
                 &::after{
                     transform: scaleX(1.4) scaleY(1.6);
                     opacity: 0;
-            
                 }
             }
-        
+
             &:active {
                 transform: translate(-1px);
-                box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
+                box-shadow: 0 0.5rem 0.5rem rgba($color-black, .2);
             }
-            
+
             &::after{
                 content: ''; 
                 display: inline-block;
@@ -36,14 +35,14 @@
                 left: 0;
                 z-index: -1;
                 transition: all 0.4s;
-                
         }    
-    
     }
+
         &--animated {
             animation: moveInBottom 0.5s ease-out .65s;
             animation-fill-mode: backwards;
         }
+        
         &--white{
             background-color: $color-white;
             color: $color-primary-dark;
