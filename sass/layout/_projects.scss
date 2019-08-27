@@ -2,7 +2,7 @@
    
 .project-cards {
     display: grid;
-    margin: 1rem 0;
+    margin: 0;
     grid-column: center-start / center-end;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 5rem;
