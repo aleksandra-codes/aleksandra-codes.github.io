@@ -160,6 +160,7 @@ p {
   justify-content: center;
   text-align: center;
   color: #f7f7f7;
+  margin-bottom: 3rem;
   background: linear-gradient(90deg, #01ebfc, #ff00f2);
   animation: animateBackground  20s linear infinite;
   /* Scroll snap effect */
@@ -191,8 +192,7 @@ p {
   background-color: #fff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 3rem;
-  padding-bottom: 2rem; }
+  grid-row-gap: 3rem; }
   .card-holder__img {
     width: 100%;
     grid-row: 1 / 3;
@@ -214,7 +214,7 @@ p {
     border-radius: 10rem; }
   .card-holder__tech {
     font-size: 1.5rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
     display: flex;
     align-items: center; }
     .card-holder__tech i {
