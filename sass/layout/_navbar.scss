@@ -17,13 +17,13 @@ nav {
       }
       a {
         display: inline-block;
-        width: 10rem;
+        width: 15rem;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
-        padding: 1rem 0;
+        padding: 1rem 1rem;
         color: $color-primary-light;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
       }
       
       a#openup {
@@ -68,6 +68,7 @@ nav {
       text-indent: 2.5rem;
       background: $color-primary-background;
       border-bottom: 1px solid $color-primary-dark;
+      height: 5rem;
     }
     a:hover {
       background: $color-primary-dark;
@@ -84,7 +85,7 @@ nav {
       display: inline-block;
       position: absolute;
       right: 0.5rem;
-      top: 1.5rem;
+      top: 1.9rem;
     }
     a#openup {
       display: block;
