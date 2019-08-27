@@ -96,7 +96,8 @@ p {
   background-clip: text;
   color: #555;
   transition: all .2s;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  margin: 3rem 0; }
   .heading-secondary:hover {
     transform: skewY(2deg);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -209,13 +210,58 @@ p {
   .welcome h1 {
     font-size: 6rem; }
 
+@media screen and (max-width: 580px) {
+  h1 {
+    font-size: 3rem; }
+  nav {
+    height: auto;
+    border-bottom: 0; }
+    nav ul {
+      display: none;
+      height: auto; }
+    nav li {
+      width: 100%;
+      float: left;
+      position: relative; }
+    nav a {
+      text-align: left;
+      width: 100%;
+      text-indent: 2.5rem;
+      background: #f7f7f7;
+      border-bottom: 1px solid #1f1f1f; }
+    nav a:hover {
+      background: #1f1f1f; }
+    nav a#openup:after {
+      content: "|||";
+      transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-90deg);
+      /* Safari and Chrome */
+      width: 3.5rem;
+      height: 3.5rem;
+      display: inline-block;
+      position: absolute;
+      right: 0.5rem;
+      top: 2rem; }
+    nav a#openup {
+      display: block;
+      background-color: #f7f7f7;
+      width: 100%;
+      position: relative;
+      padding: 2rem; } }
+
+@media screen and (max-width: 60em) {
+  section p {
+    font-size: 2rem; } }
+
 .aboutMe {
   position: relative;
   width: 100%; }
 
 .project-cards {
   display: grid;
-  margin: 15rem 0;
+  margin: 1rem 0;
   grid-column: center-start / center-end;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
@@ -364,13 +410,5 @@ nav {
       padding: 2rem; } }
 
 @media screen and (max-width: 60em) {
-  .welcome::before {
-    display: none; }
-  .welcome::after {
-    display: none; }
   section p {
     font-size: 2rem; } }
-
-@media screen and (min-width: 40em) {
-  .cardHolder {
-    flex: 0 1 calc(50% - 1em); } }

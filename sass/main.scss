@@ -87,12 +87,7 @@
 
 
     @media screen and (max-width: 60em) {
-        .welcome::before{
-            display: none;
-        }
-        .welcome::after{
-            display: none;
-        }  
+
           
         section p {
             font-size: 2rem;
@@ -103,15 +98,9 @@
     }
     @media screen and (min-width: 40em) {
 
-     
-        .cardHolder {
-            flex: 0 1 calc(50% - 1em);
-        }
     }
 
     @media screen and (min-width: 80em) {
-        // .cardHolder {
-        //     flex: 0 1 calc(25% - 1em);
-        // }
+
     }
 
