@@ -119,7 +119,7 @@ p {
   border-radius: 100px;
   transition: all .2s;
   position: relative;
-  font-size: 1.5rem; }
+  font-size: 1.7rem; }
   .btn:link:hover, .btn:visited:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -174,9 +174,9 @@ p {
     display: block;
     margin-bottom: 6rem;
     animation: moveInRight 0.5s ease-out;
-    font-size: 2.3rem; }
+    font-size: 3rem; }
   .welcome h1 {
-    font-size: 6rem; }
+    font-size: 5.5rem; }
 
 .aboutMe {
   position: relative;
@@ -244,6 +244,7 @@ nav {
       background-color: #555;
       color: #fff; }
   nav a {
+    height: 15rem;
     display: inline-block;
     width: 15rem;
     text-align: center;
