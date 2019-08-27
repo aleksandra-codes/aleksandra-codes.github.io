@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: $color-grey-light-1;
 
     background: linear-gradient(90deg, $color-gradient-end, $color-gradient-start);
     animation: animateBackground  20s linear infinite;

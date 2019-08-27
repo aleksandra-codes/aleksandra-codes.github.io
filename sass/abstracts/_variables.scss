@@ -1,5 +1,5 @@
 $color-primary-background: #f7f7f7;
-$color-primary-light: #333;
+$color-primary-light: #555;
 $color-primary-dark: rgb(31, 31, 31);
 $color-white: #fff;
 $color-black: #000;
@@ -18,3 +18,9 @@ $gutter-horizontal: 6rem;
 //Navbar 
 
 $navbar-height: 4rem;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;

@@ -83,31 +83,7 @@
     
   }
 
-  
-    
-   
-    .slide {
-        display: block;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        
-    }
-    .cardHolder {
-        height: auto; /* Can be anything */
-        width: 25%; /* Can be anything */
-        flex: 0 1 80%;
-        background-color: rgba($color-white, 0.7);
-    }
-    
- 
-    
-    .slideImg {
-        max-height: 100%;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        margin: auto;
-    }
+
 
 
     @media screen and (max-width: 60em) {
@@ -117,11 +93,6 @@
         .welcome::after{
             display: none;
         }  
-
-        section h1 {
-            // font-size: 2rem;
-
-          }
           
         section p {
             font-size: 2rem;
@@ -131,11 +102,7 @@
         
     }
     @media screen and (min-width: 40em) {
-        .slide {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+
      
         .cardHolder {
             flex: 0 1 calc(50% - 1em);
@@ -143,8 +110,8 @@
     }
 
     @media screen and (min-width: 80em) {
-        .cardHolder {
-            flex: 0 1 calc(25% - 1em);
-        }
+        // .cardHolder {
+        //     flex: 0 1 calc(25% - 1em);
+        // }
     }
 
