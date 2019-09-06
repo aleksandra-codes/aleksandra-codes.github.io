@@ -3,3 +3,24 @@
     width: 100%;
 
 }
+
+.section-about{
+    &__paragraph{
+        font-size: 1.6rem;
+        margin-left: 1rem;
+        display: flex;
+        text-align: left;
+        margin-bottom: 1rem;
+        color: $color-primary-light;
+    }
+
+    &__icon i {
+        
+        font-size: 6rem;
+        padding: 0.5rem;
+        color: $color-primary-light;
+    }
+
+}
+
+
