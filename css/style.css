@@ -203,6 +203,9 @@ p {
   grid-gap: 5rem;
   padding: 0 6rem; }
 
+#rideShare .card-holder__tech {
+  height: 14rem; }
+
 .card-holder {
   background-color: #fff;
   display: grid;
@@ -337,12 +340,8 @@ nav {
   section p {
     font-size: 2rem; } }
 
-#section-contact {
-  width: 80%;
-  background-color: #fff;
-  height: 30vh;
-  display: flex;
-  margin: 0 auto; }
+#contact {
+  padding-bottom: 5rem; }
 
 .btn-link {
   display: inline-block;
