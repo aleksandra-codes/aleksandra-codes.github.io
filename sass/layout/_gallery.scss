@@ -26,7 +26,7 @@
                 object-fit: cover;
                 transition: 2s;
                 // align-self: stretch;
-                margin: 2rem 0;
+                // margin: 2rem;
 
                 &:hover {
                     opacity: 0.2;
@@ -41,7 +41,7 @@
                 color: $color-primary-dark;
                 z-index: -10;
                 opacity: 1;
-                transform: translateY(-29rem);
+                transform: translateY(-35rem);
                 visibility: visible;
                     
                 }
@@ -55,10 +55,9 @@
     height: 40rem;
     overflow: hidden;
     display: inline-block;
-    margin: 2rem 0;
     // background-color: $color-black;
     // padding: 4rem;
-    transition: all 1s;
+    transition: all 2s;
     &--content {
         visibility: hidden;
         // transition: all 1s;
