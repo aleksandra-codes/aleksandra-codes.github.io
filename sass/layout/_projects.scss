@@ -29,7 +29,7 @@
     
 
     &__tech {
-        font-size: 1.5rem;
+        font-size: $font-size-general;
         margin-left: 1rem;
         display: flex;
         align-items: center;
@@ -44,7 +44,7 @@
     &__desc {
         grid-row: 3 / 3;
         grid-column: 1 / -1;
-        font-size: 1.6rem;
+        font-size: $font-size-general;
     }
 
     &__name {
@@ -62,7 +62,7 @@
         grid-column: 1 / -1;
         z-index: 3;
         width: 80%;
-        font-size: 1.7rem;
+        font-size: $font-size-general;
         text-align: center;
         padding: 1.25rem;
         padding-bottom: o;

@@ -23,10 +23,11 @@ h1 {
     font-size: 3rem;
     text-transform: uppercase;
     // background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    animation: animateBackground  10s linear infinite;
+
     display: inline-block;
     -webkit-background-clip: text;
     background-clip: text;
+    // color: transparent;
     color: $color-primary-light;
     transition: all .2s;
     letter-spacing: 2px;
