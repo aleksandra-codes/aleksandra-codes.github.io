@@ -12,8 +12,8 @@
     color: $color-grey-light-1;
     margin-bottom: 3rem;
 
-    background: linear-gradient(45deg, white, blue);
-    // animation: animateBackground  20s linear infinite;
+    background: linear-gradient(50deg, $color-gradient-start, $color-gradient-end);
+    animation: animateBackground  20s linear infinite;
     &__heading-primary {
         &--main {
             display: block;
