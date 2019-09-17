@@ -18,7 +18,8 @@
   "homepage": "https://github.com/aleksandra-codes/aleksandra-codes.github.io#readme",
   "dependencies": {
     "jquery": "^3.4.1",
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "sass": "^1.22.12"
   },
   "devDependencies": {
     "node-sass": "^4.12.0"
